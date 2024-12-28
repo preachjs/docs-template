@@ -4,7 +4,7 @@ import BaseLayout from "../layouts/base";
 
 export default function ContentPage() {
   const route = useRoute();
-  const Content = sideBar[route.params.content].source;
+  const Content = sideBar[route.params.content]?.source || (() => <></>);
   return (
     <BaseLayout sideBarItems={sideBar}>
       <Content />

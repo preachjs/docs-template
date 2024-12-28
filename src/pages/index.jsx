@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/base";
 
 const AllContent = () =>
   Object.keys(sideBar).map((d, i) => {
-    const Component = sideBar[d].source;
+    const Component = sideBar[d]?.source || (() => <></>);
     const classList = i > 0 ? "mt-12 pt-12" : "";
     return <Component class={classList} />;
   });
