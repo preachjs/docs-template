@@ -5,6 +5,7 @@ import mdx from "@mdx-js/rollup";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.BASE_URL ?? "/",
   plugins: [
     preact({
       prerender: {
