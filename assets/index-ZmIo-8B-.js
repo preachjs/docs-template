@@ -1,0 +1,1 @@
+import{a as s,k as c}from"./main-ByFQtET_.js";import{s as t,B as m}from"./base-Dq-w6_jC.js";const i=()=>Object.keys(t).map((o,a)=>{var e;const r=((e=t[o])==null?void 0:e.source)||(()=>s(c,{})),n=a>0?"mt-12 pt-12":"";return s(r,{class:n})});function p(){return s(m,{sideBarItems:t,children:s(i,{})})}export{p as default};

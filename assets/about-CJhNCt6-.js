@@ -1,4 +1,4 @@
-import{a as e,k as a}from"./main-C3zjrRCa.js";function i(t){const n={a:"a",h2:"h2",h3:"h3",li:"li",p:"p",ul:"ul",...t.components};return e(a,{children:[e(n.h2,{children:"About"}),`
+import{a as e,k as a}from"./main-ByFQtET_.js";function i(t){const n={a:"a",h2:"h2",h3:"h3",li:"li",p:"p",ul:"ul",...t.components};return e(a,{children:[e(n.h2,{children:"About"}),`
 `,e(n.p,{children:[`Minimal document template based on Vite and Preact and takes inspiration from
 `,e(n.a,{href:"https://antidote.sh",children:"antidote.sh"})]}),`
 `,e(n.h3,{children:"Features"}),`
