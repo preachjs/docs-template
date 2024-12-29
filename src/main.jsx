@@ -1,4 +1,3 @@
-import { render } from "preact";
 import {
   ErrorBoundary,
   LocationProvider,
@@ -40,8 +39,7 @@ export const prerender = async (data) => {
 };
 
 if (typeof window !== "undefined") {
-  const mounter = import.meta.env.PROD ? hydrate : render;
-  mounter(<Main />, document.getElementById("app"));
+  hydrate(<Main />, document.getElementById("app"));
 }
 
 function mapPagesToRoutes(routes) {
