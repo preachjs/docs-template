@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
       - name: Build
-        run: pnpm build
+        run: BASE_URL='/docs-template/' pnpm build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
