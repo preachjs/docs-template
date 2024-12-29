@@ -13,4 +13,10 @@ export const sideBar = {
     source: lazy(() => import("./about.mdx")),
     key: "about",
   },
+  credits: { 
+    order: 2,
+    label: "Credits",
+    source: lazy(() => import("./credits.mdx")),
+    key: "credits",
+  }
 };
