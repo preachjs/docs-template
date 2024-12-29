@@ -1,0 +1,1 @@
+import{a as t}from"./main-DgmbK9td.js";import{s,B as c}from"./base-BO7vpWLW.js";const i=()=>{const o=[];let e=-1;for(let n in s){e++;const r=s[n].source,a=e>0?"mt-12 pt-12":"";o.push(t(r,{class:a}))}return o};function u(){return t(c,{sideBarItems:s,children:t(i,{})})}export{u as default};
