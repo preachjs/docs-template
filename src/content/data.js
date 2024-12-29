@@ -1,22 +1,26 @@
-import { lazy } from "preact-iso";
+const contentMap = {};
+const posts = import.meta.glob("./**/*.mdx", { eager: true });
+for (let i in posts) {
+  contentMap[i] = "default" in posts[i] ? posts[i].default : posts[i];
+}
 
 export const sideBar = {
   "quick-start": {
     order: 0,
     label: "Quick Start",
-    source: lazy(() => import("./quick-start.mdx")),
+    source: contentMap["./quick-start.mdx"],
     key: "quick-start",
   },
   about: {
     order: 1,
     label: "About",
-    source: lazy(() => import("./about.mdx")),
+    source: contentMap["./about.mdx"],
     key: "about",
   },
-  credits: { 
+  credits: {
     order: 2,
     label: "Credits",
-    source: lazy(() => import("./credits.mdx")),
+    source: contentMap["./credits.mdx"],
     key: "credits",
-  }
+  },
 };

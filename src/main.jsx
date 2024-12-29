@@ -1,4 +1,4 @@
-import { hydrate, render } from "preact";
+import { render } from "preact";
 import {
   ErrorBoundary,
   LocationProvider,
@@ -6,9 +6,10 @@ import {
   Router,
   lazy,
   prerender as ssr,
+  hydrate,
 } from "preact-iso";
 import { routes } from "~routes";
-import "./index.css"
+import "./index.css";
 
 const PageRoutes = () => {
   return <Router>{mapPagesToRoutes(routes)}</Router>;
@@ -47,10 +48,7 @@ function mapPagesToRoutes(routes) {
   const routeComponents = [];
   for (const route of routes) {
     routeComponents.push(
-      <Route
-        path={route.routePath}
-        component={lazy(() => route.module())}
-      />
+      <Route path={route.routePath} component={lazy(() => route.module())} />
     );
   }
   return routeComponents;
