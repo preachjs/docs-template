@@ -1,48 +1,33 @@
-import preact from "@preact/preset-vite";
-import { readFile } from "fs/promises";
-import { defineConfig } from "vite";
 import mdx from "@mdx-js/rollup";
+import preact from "@preact/preset-vite";
+import { adex } from "adex";
+import reHighlight from "rehype-highlight";
+import reSlugs from "rehype-slug";
+import { remarkMdxToc } from "remark-mdx-toc";
+import { defineConfig } from "vite";
+
+const baseURL = process.env.BASE_URL ?? "/";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.BASE_URL ?? "/",
+  base: baseURL,
   plugins: [
     preact({
       prerender: {
         enabled: true,
+        prerenderScript: "/virtual:adex:client",
         renderTarget: "#app",
       },
     }),
-    preactPages(),
+    adex({
+      ssr: false,
+      islands: false,
+    }),
     mdx({
+      baseUrl: baseURL,
       jsxImportSource: "preact",
+      rehypePlugins: [reSlugs, reHighlight],
+      remarkPlugins: [remarkMdxToc],
     }),
   ],
 });
-
-/**
- * @returns {import("vite").Plugin}
- */
-function preactPages({ root = "/src/pages" } = {}) {
-  return {
-    name: "routes",
-    enforce: "pre",
-    resolveId(id) {
-      if (id !== "~routes") {
-        return;
-      }
-      return "/0~routes";
-    },
-    async load(id) {
-      if (id !== "/0~routes") {
-        return;
-      }
-      const code = (await readFile("./runtime/route.js", "utf8"))
-        .replaceAll("#{__PLUGIN_PAGES_ROOT}", root + "/**/*.jsx")
-        .replaceAll("#{__PLUGIN_PAGES_ROOT_REGEX}", `^${root}`);
-      return {
-        code,
-      };
-    },
-  };
-}
