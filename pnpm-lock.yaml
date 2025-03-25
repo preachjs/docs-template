@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       adex:
-        specifier: 0.0.18-alpha.6
-        version: 0.0.18-alpha.6(@preact/preset-vite@2.9.3(@babel/core@7.26.0)(preact@10.25.3)(vite@5.4.15))(astring@1.9.0)(preact@10.25.3)(react@19.0.0)
+        specifier: github:barelyhuman/adex#path:adex
+        version: https://codeload.github.com/barelyhuman/adex/tar.gz/4cee7a0ac717860622d9e12c9bff815069ddbca5#path:adex(@preact/preset-vite@2.9.3(@babel/core@7.26.0)(preact@10.25.3)(vite@5.4.15))(astring@1.9.0)(preact@10.25.3)(react@19.0.0)
       preact:
         specifier: ^10.25.3
         version: 10.25.3
@@ -570,8 +570,9 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  adex@0.0.18-alpha.6:
-    resolution: {integrity: sha512-8AxkXB0DLmlQSAkcgCFca4tAyyVySZ1AK3VCtcONOPAvocfnkFoPfftNeo6+NvuFg/nxDN+qcINVBEy1PUP3Vw==, tarball: https://registry.npmjs.org/adex/-/adex-0.0.18-alpha.6.tgz}
+  adex@https://codeload.github.com/barelyhuman/adex/tar.gz/4cee7a0ac717860622d9e12c9bff815069ddbca5#path:adex:
+    resolution: {path: adex, tarball: https://codeload.github.com/barelyhuman/adex/tar.gz/4cee7a0ac717860622d9e12c9bff815069ddbca5}
+    version: 0.0.18-alpha.6
     peerDependencies:
       '@preact/preset-vite': '>=2.8.2'
       adex-adapter-node: '>=0.0.15'
@@ -2373,7 +2374,7 @@ snapshots:
 
   acorn@8.14.0: {}
 
-  adex@0.0.18-alpha.6(@preact/preset-vite@2.9.3(@babel/core@7.26.0)(preact@10.25.3)(vite@5.4.15))(astring@1.9.0)(preact@10.25.3)(react@19.0.0):
+  adex@https://codeload.github.com/barelyhuman/adex/tar.gz/4cee7a0ac717860622d9e12c9bff815069ddbca5#path:adex(@preact/preset-vite@2.9.3(@babel/core@7.26.0)(preact@10.25.3)(vite@5.4.15))(astring@1.9.0)(preact@10.25.3)(react@19.0.0):
     dependencies:
       '@barelyhuman/tiny-use': 0.0.2
       '@dumbjs/preland': 0.0.2(astring@1.9.0)

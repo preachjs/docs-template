@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "adex": "0.0.18-alpha.6",
+    "adex": "github:barelyhuman/adex#path:adex",
     "preact": "^10.25.3",
     "preact-iso": "^2.8.1"
   },
@@ -20,8 +20,8 @@
     "@preact/preset-vite": "^2.9.3",
     "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.20",
-    "rehype-slug": "^6.0.0",
     "rehype-highlight": "^7.0.2",
+    "rehype-slug": "^6.0.0",
     "remark-mdx-toc": "^0.3.1",
     "tailwindcss": "^3.4.17",
     "vite": "^5",
