@@ -17,9 +17,6 @@ importers:
       preact-iso:
         specifier: ^2.8.1
         version: 2.9.1(preact-render-to-string@6.5.12(preact@10.25.3))(preact@10.25.3)
-      wouter-preact:
-        specifier: ^3.6.1
-        version: 3.6.1(preact@10.25.3)
     devDependencies:
       '@mdx-js/mdx':
         specifier: ^3.1.0
@@ -39,6 +36,12 @@ importers:
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
+      rehype-highlight:
+        specifier: ^7.0.2
+        version: 7.0.2
+      rehype-slug:
+        specifier: ^6.0.0
+        version: 6.0.0
       remark-mdx-toc:
         specifier: ^0.3.1
         version: 0.3.1
@@ -999,6 +1002,9 @@ packages:
     resolution: {integrity: sha512-r1ekGw/Bgpi3HLV3h1MRBIlSAdHoIMklpaQ3OQLFcRw9PwAj2rqigvIbg+dBUI51OxVI2jsEtDywDBjSiuf7Ug==, tarball: https://registry.npmjs.org/giget/-/giget-1.2.5.tgz}
     hasBin: true
 
+  github-slugger@2.0.0:
+    resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==, tarball: https://registry.npmjs.org/github-slugger/-/github-slugger-2.0.0.tgz}
+
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==, tarball: https://registry.npmjs.org/glob-parent/-/glob-parent-5.1.2.tgz}
     engines: {node: '>= 6'}
@@ -1019,11 +1025,23 @@ packages:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==, tarball: https://registry.npmjs.org/hasown/-/hasown-2.0.2.tgz}
     engines: {node: '>= 0.4'}
 
+  hast-util-heading-rank@3.0.0:
+    resolution: {integrity: sha512-EJKb8oMUXVHcWZTDepnr+WNbfnXKFNf9duMesmr4S8SXTJBJ9M4Yok08pu9vxdJwdlGRhVumk9mEhkEvKGifwA==, tarball: https://registry.npmjs.org/hast-util-heading-rank/-/hast-util-heading-rank-3.0.0.tgz}
+
+  hast-util-is-element@3.0.0:
+    resolution: {integrity: sha512-Val9mnv2IWpLbNPqc/pUem+a7Ipj2aHacCwgNfTiK0vJKl0LF+4Ba4+v1oPHFpf3bLYmreq0/l3Gud9S5OH42g==, tarball: https://registry.npmjs.org/hast-util-is-element/-/hast-util-is-element-3.0.0.tgz}
+
   hast-util-to-estree@3.1.0:
     resolution: {integrity: sha512-lfX5g6hqVh9kjS/B9E2gSkvHH4SZNiQFiqWS0x9fENzEl+8W12RqdRxX6d/Cwxi30tPQs3bIO+aolQJNp1bIyw==, tarball: https://registry.npmjs.org/hast-util-to-estree/-/hast-util-to-estree-3.1.0.tgz}
 
   hast-util-to-jsx-runtime@2.3.2:
     resolution: {integrity: sha512-1ngXYb+V9UT5h+PxNRa1O1FYguZK/XL+gkeqvp7EdHlB9oHUG0eYRo/vY5inBdcqo3RkPMC58/H94HvkbfGdyg==, tarball: https://registry.npmjs.org/hast-util-to-jsx-runtime/-/hast-util-to-jsx-runtime-2.3.2.tgz}
+
+  hast-util-to-string@3.0.1:
+    resolution: {integrity: sha512-XelQVTDWvqcl3axRfI0xSeoVKzyIFPwsAGSLIsKdJKQMXDYJS4WYrBNF/8J7RdhIcFI2BOHgAifggsvsxp/3+A==, tarball: https://registry.npmjs.org/hast-util-to-string/-/hast-util-to-string-3.0.1.tgz}
+
+  hast-util-to-text@4.0.2:
+    resolution: {integrity: sha512-KK6y/BN8lbaq654j7JgBydev7wuNMcID54lkRav1P0CaE1e47P72AWWPiGKXTJU271ooYzcvTAn/Zt0REnvc7A==, tarball: https://registry.npmjs.org/hast-util-to-text/-/hast-util-to-text-4.0.2.tgz}
 
   hast-util-whitespace@3.0.0:
     resolution: {integrity: sha512-88JUN06ipLwsnv+dVn+OIYOvAuvBMy/Qoi6O7mQHxdPXpjy+Cd6xRkWwux7DKO+4sYILtLBRIKgsdpS2gQc7qw==, tarball: https://registry.npmjs.org/hast-util-whitespace/-/hast-util-whitespace-3.0.0.tgz}
@@ -1031,6 +1049,10 @@ packages:
   he@1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==, tarball: https://registry.npmjs.org/he/-/he-1.2.0.tgz}
     hasBin: true
+
+  highlight.js@11.11.1:
+    resolution: {integrity: sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==, tarball: https://registry.npmjs.org/highlight.js/-/highlight.js-11.11.1.tgz}
+    engines: {node: '>=12.0.0'}
 
   hoofd@1.7.3:
     resolution: {integrity: sha512-ssVCn3i3w97C4ubB6Xf4oGbil5lj/r9rn7ZRlY5p1JmLa6i7ZviCk9Huo9WDK2OvP6K7HTga5+SRnw07e2uKOw==, tarball: https://registry.npmjs.org/hoofd/-/hoofd-1.7.3.tgz}
@@ -1154,6 +1176,9 @@ packages:
 
   longest-streak@3.1.0:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==, tarball: https://registry.npmjs.org/longest-streak/-/longest-streak-3.1.0.tgz}
+
+  lowlight@3.3.0:
+    resolution: {integrity: sha512-0JNhgFoPvP6U6lE/UdVsSq99tn6DhjjpAj5MxG49ewd2mOBVtwWYIT8ClyABhq198aXXODMU6Ox8DrGy/CpTZQ==, tarball: https://registry.npmjs.org/lowlight/-/lowlight-3.3.0.tgz}
 
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==, tarball: https://registry.npmjs.org/lru-cache/-/lru-cache-10.4.3.tgz}
@@ -1313,9 +1338,6 @@ packages:
   minizlib@2.1.2:
     resolution: {integrity: sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==, tarball: https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz}
     engines: {node: '>= 8'}
-
-  mitt@3.0.1:
-    resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==, tarball: https://registry.npmjs.org/mitt/-/mitt-3.0.1.tgz}
 
   mkdirp@1.0.4:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==, tarball: https://registry.npmjs.org/mkdirp/-/mkdirp-1.0.4.tgz}
@@ -1541,8 +1563,14 @@ packages:
     resolution: {integrity: sha512-RSYAtP31mvYLkAHrOlh25pCNQ5hWnT106VukGaaFfuJrZFkGRX5GhUAdPqpSDXxOhA2c4akmRuplv1mRqnBn6Q==, tarball: https://registry.npmjs.org/regexparam/-/regexparam-3.0.0.tgz}
     engines: {node: '>=8'}
 
+  rehype-highlight@7.0.2:
+    resolution: {integrity: sha512-k158pK7wdC2qL3M5NcZROZ2tR/l7zOzjxXd5VGdcfIyoijjQqpHd3JKtYSBDpDZ38UI2WJWuFAtkMDxmx5kstA==, tarball: https://registry.npmjs.org/rehype-highlight/-/rehype-highlight-7.0.2.tgz}
+
   rehype-recma@1.0.0:
     resolution: {integrity: sha512-lqA4rGUf1JmacCNWWZx0Wv1dHqMwxzsDWYMTowuplHF3xH0N/MmrZ/G3BDZnzAkRmxDadujCjaKM2hqYdCBOGw==, tarball: https://registry.npmjs.org/rehype-recma/-/rehype-recma-1.0.0.tgz}
+
+  rehype-slug@6.0.0:
+    resolution: {integrity: sha512-lWyvf/jwu+oS5+hL5eClVd3hNdmwM1kAC0BUvEGD19pajQMIzcNUd/k9GsfQ+FfECvX+JE+e9/btsKH0EjJT6A==, tarball: https://registry.npmjs.org/rehype-slug/-/rehype-slug-6.0.0.tgz}
 
   remark-mdx-toc@0.3.1:
     resolution: {integrity: sha512-m/SPLi9akkBudljbG+RM6as9vgPTz61ZIweQuaefn6bwYfPVfvsv4MHZekHucWAMgYL1suavOYqZ2BSsB/nl2A==, tarball: https://registry.npmjs.org/remark-mdx-toc/-/remark-mdx-toc-0.3.1.tgz}
@@ -1715,6 +1743,9 @@ packages:
   unifont@0.0.2:
     resolution: {integrity: sha512-IgXBLbWoBGHs/U/Z5ywH8Lcnrc84uaRt37KmUDOrzkhNl3c9sBx2hcVhMQkQ+oaQLlQZMe9qnRcoggUAJZj8wA==, tarball: https://registry.npmjs.org/unifont/-/unifont-0.0.2.tgz}
 
+  unist-util-find-after@5.0.0:
+    resolution: {integrity: sha512-amQa0Ep2m6hE2g72AugUItjbuM8X8cGQnFoHk0pGfrFeT9GZhzN5SW8nRsiGKK7Aif4CrACPENkA6P/Lw6fHGQ==, tarball: https://registry.npmjs.org/unist-util-find-after/-/unist-util-find-after-5.0.0.tgz}
+
   unist-util-is@5.2.1:
     resolution: {integrity: sha512-u9njyyfEh43npf1M+yGKDGVPbY/JWEemg5nH05ncKPfi+kBbKBJoTdsogMu33uhytuLlv9y0O7GH7fEdwLdLQw==, tarball: https://registry.npmjs.org/unist-util-is/-/unist-util-is-5.2.1.tgz}
 
@@ -1816,11 +1847,6 @@ packages:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==, tarball: https://registry.npmjs.org/which/-/which-2.0.2.tgz}
     engines: {node: '>= 8'}
     hasBin: true
-
-  wouter-preact@3.6.1:
-    resolution: {integrity: sha512-0SEi8zMxbc5u+drCJhVyOm4dr/GEjzgcn7MEKCBoHJcGhR+HF5/ZxHZ5jbvrV8xwic/n0OWsIefvpu9LmlF73A==, tarball: https://registry.npmjs.org/wouter-preact/-/wouter-preact-3.6.1.tgz}
-    peerDependencies:
-      preact: ^10.0.0
 
   wrap-ansi@7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==, tarball: https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-7.0.0.tgz}
@@ -2797,6 +2823,8 @@ snapshots:
       pathe: 2.0.3
       tar: 6.2.1
 
+  github-slugger@2.0.0: {}
+
   glob-parent@5.1.2:
     dependencies:
       is-glob: 4.0.3
@@ -2819,6 +2847,14 @@ snapshots:
   hasown@2.0.2:
     dependencies:
       function-bind: 1.1.2
+
+  hast-util-heading-rank@3.0.0:
+    dependencies:
+      '@types/hast': 3.0.4
+
+  hast-util-is-element@3.0.0:
+    dependencies:
+      '@types/hast': 3.0.4
 
   hast-util-to-estree@3.1.0:
     dependencies:
@@ -2861,11 +2897,24 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  hast-util-to-string@3.0.1:
+    dependencies:
+      '@types/hast': 3.0.4
+
+  hast-util-to-text@4.0.2:
+    dependencies:
+      '@types/hast': 3.0.4
+      '@types/unist': 3.0.3
+      hast-util-is-element: 3.0.0
+      unist-util-find-after: 5.0.0
+
   hast-util-whitespace@3.0.0:
     dependencies:
       '@types/hast': 3.0.4
 
   he@1.2.0: {}
+
+  highlight.js@11.11.1: {}
 
   hoofd@1.7.3(react@19.0.0):
     dependencies:
@@ -2951,6 +3000,12 @@ snapshots:
   lodash.merge@4.6.2: {}
 
   longest-streak@3.1.0: {}
+
+  lowlight@3.3.0:
+    dependencies:
+      '@types/hast': 3.0.4
+      devlop: 1.1.0
+      highlight.js: 11.11.1
 
   lru-cache@10.4.3: {}
 
@@ -3301,8 +3356,6 @@ snapshots:
       minipass: 3.3.6
       yallist: 4.0.0
 
-  mitt@3.0.1: {}
-
   mkdirp@1.0.4: {}
 
   mlly@1.7.4:
@@ -3520,6 +3573,14 @@ snapshots:
 
   regexparam@3.0.0: {}
 
+  rehype-highlight@7.0.2:
+    dependencies:
+      '@types/hast': 3.0.4
+      hast-util-to-text: 4.0.2
+      lowlight: 3.3.0
+      unist-util-visit: 5.0.0
+      vfile: 6.0.3
+
   rehype-recma@1.0.0:
     dependencies:
       '@types/estree': 1.0.6
@@ -3527,6 +3588,14 @@ snapshots:
       hast-util-to-estree: 3.1.0
     transitivePeerDependencies:
       - supports-color
+
+  rehype-slug@6.0.0:
+    dependencies:
+      '@types/hast': 3.0.4
+      github-slugger: 2.0.0
+      hast-util-heading-rank: 3.0.0
+      hast-util-to-string: 3.0.1
+      unist-util-visit: 5.0.0
 
   remark-mdx-toc@0.3.1:
     dependencies:
@@ -3781,6 +3850,11 @@ snapshots:
       ohash: 1.1.6
       ufo: 1.5.4
 
+  unist-util-find-after@5.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.0
+
   unist-util-is@5.2.1:
     dependencies:
       '@types/unist': 2.0.11
@@ -3893,12 +3967,6 @@ snapshots:
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
-
-  wouter-preact@3.6.1(preact@10.25.3):
-    dependencies:
-      mitt: 3.0.1
-      preact: 10.25.3
-      regexparam: 3.0.0
 
   wrap-ansi@7.0.0:
     dependencies:
