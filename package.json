@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "adex": "github:barelyhuman/adex#path:adex",
+    "adex": "^0.0.18",
     "preact": "^10.25.3",
     "preact-iso": "^2.8.1"
   },
