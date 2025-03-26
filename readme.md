@@ -2,4 +2,4 @@
 
 # License
 
-[AGPL](/LICENSE)
+[MIT](/LICENSE)
