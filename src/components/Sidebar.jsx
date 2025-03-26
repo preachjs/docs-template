@@ -1,4 +1,5 @@
 import { useLocation } from "preact-iso";
+import { Link } from "./link";
 
 export function Sidebar({ items = [] } = {}) {
   const location = useLocation();
@@ -17,10 +18,10 @@ export function Sidebar({ items = [] } = {}) {
 function SidebarItem({ item, active }) {
   return (
     <li class="w-fit">
-      <a
+      <Link
         href={"/" + item.key}
         class={`group text-zinc-400 hover:text-zinc-600 ${
-          active ? "text-zinc-600"   : ""
+          active ? "text-zinc-600" : ""
         }`}
       >
         {item.label}
@@ -29,7 +30,7 @@ function SidebarItem({ item, active }) {
             active ? "max-w-full !bg-zinc-600" : ""
           }`}
         ></span>
-      </a>
+      </Link>
     </li>
   );
 }

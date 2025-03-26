@@ -1,7 +1,9 @@
 const contentMap = {};
 const posts = import.meta.glob("./**/*.mdx", { eager: true });
+
 for (let i in posts) {
   contentMap[i] = "default" in posts[i] ? posts[i].default : posts[i];
+  contentMap[i].toc = "toc" in posts[i] ? posts[i].toc : {};
 }
 
 export const sideBar = {

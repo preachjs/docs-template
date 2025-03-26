@@ -1,3 +1,4 @@
+import { Link } from "../components/link";
 import { Sidebar } from "../components/Sidebar";
 
 export default function BaseLayout({ children, sideBarItems = [] }) {
@@ -6,9 +7,9 @@ export default function BaseLayout({ children, sideBarItems = [] }) {
       <div class="min-h-[80vh] mx-auto max-w-4xl p-2">
         <header class="flex flex-col justify-center h-[400px]">
           <h1 class="font-semibold text-2xl">
-            <a href="/" class="hover:underline hover:underline-offset-4">
+            <Link href="/" class="hover:underline hover:underline-offset-4">
               Preact Docs
-            </a>
+            </Link>
           </h1>
           <p>
             <small>Docs template based on preact</small>
@@ -34,12 +35,16 @@ export default function BaseLayout({ children, sideBarItems = [] }) {
             <a
               class="w-full hover:underline hover:underline-offset-4"
               href="https://github.com/barelyhuman"
+              target="_blank"
+              rel="noopener"
             >
               Github
             </a>
           </li>
           <li class="text-xs">
             <a
+              target="_blank"
+              rel="noopener"
               class="w-full hover:underline hover:underline-offset-4"
               href="https://github.com/barelyhuman"
             >
