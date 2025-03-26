@@ -6,6 +6,7 @@ const toc = [];
 
 const AllContent = () => {
   const components = [];
+  toc.length = 0;
   let i = -1;
   for (let d in sideBar) {
     i++;
